@@ -1,13 +1,14 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
+
 import "./index.css";
 
 
 
-export function Homepage() {
+export function Homepage({cart}) {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  
 
   useEffect(() => {
     axios.get("/api/products")
@@ -17,14 +18,6 @@ export function Homepage() {
     
   }, []);
 
-  
-
-  useEffect(() => {
-    axios.get("/api/cart-items")
-      .then((response) => {
-        setCart(response.data);
-      });
-  }, []);
 
   return (
     <>
