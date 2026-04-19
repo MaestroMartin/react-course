@@ -1,4 +1,4 @@
-
+import axios from 'axios';
 import { Header } from '../components/Header';
 import { products } from '../../starting-code/data/products';
 import "./index.css";
@@ -6,6 +6,8 @@ import "./index.css";
 
 
 export function Homepage() {
+  axios.get("http://localhost:3000/api/products")
+    .then(response => response.json())
   return (
     <>
       <title>Ecommerce Project</title>
