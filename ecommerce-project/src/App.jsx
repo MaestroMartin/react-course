@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {Routes, Route} from 'react-router'
-import { HomePage } from './pages/HomePage';
+import { HomePage } from './pages/home/HomePage';
 import { CheckoutPage } from './pages/CheckoutPage';
 import { OrdersPage } from './pages/OrderPage';
 import { TrackingPage } from './pages/TrackingPage';
@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route index element={<HomePage cart={cart} />} />
       <Route path="checkout" element={<CheckoutPage />} />
-      <Route path="orders" element={<OrdersPage />} />
+      <Route path="orders" element={<OrdersPage cart={cart} />} />
       <Route path="tracking" element={<TrackingPage />} />
     </Routes>
   
