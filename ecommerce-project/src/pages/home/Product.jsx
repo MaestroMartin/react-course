@@ -1,6 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
-import { formatMoney } from "../../utilities/format";
+import  axios  from "axios";
+import { formatMoney } from "../../utils/money";
 
 
 export function Product(product, loadCart) {
